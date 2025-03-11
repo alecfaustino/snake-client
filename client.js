@@ -12,6 +12,11 @@ const connect = function () {
     console.log("Successfully connected to game server!");
     conn.write("Name: AF");
   });
+  // conn.on("connect", () => {
+  //   setTimeout(() => conn.write("Move: up"), 50);
+  //   setTimeout(() => conn.write("Move: up"), 50);
+  //   setTimeout(() => conn.write("Move: up"), 50);
+  // });
   
   // logs the data right before the idle disconnection
   conn.on("data", (data) => {
