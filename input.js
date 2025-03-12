@@ -1,3 +1,4 @@
+const { keyMap } = require('./constants');
 let connection; // setting this variable up to accept the returned object from the connection function.
 const setupInput = function(conn) {
   connection = conn; // assign the passed argument to the global variable so we can use it here.
@@ -14,21 +15,6 @@ const handleUserInput = (data) => {
   if (data === "\u0003") {
     process.exit();
   }
-  const keyMap = {
-    'w': 'Move: up',
-    'a': 'Move: left',
-    's': 'Move: down',
-    'd': 'Move: right',
-    '\u001b[A': 'Move: up',
-    '\u001b[B': 'Move: down',
-    '\u001b[D': 'Move: left',
-    '\u001b[C': 'Move: right',
-    '1': 'Say: mmm!',
-    '2': 'Say: you stole my lunch!',
-    '3': 'Say: good job!',
-    '4': 'Say: That is mine!'
-  };
-
 
   if (keyMap[data]) {
     connection.write(keyMap[data]);
