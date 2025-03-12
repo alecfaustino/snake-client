@@ -10,25 +10,19 @@ const setupInput = function(conn) {
 };
 
 const handleUserInput = (data) => {
-  // if the key is control + C, exit.
+
   if (data === "\u0003") {
     process.exit();
   }
+  const keyMap = {
+    'w': 'Move: up',
+    'a': 'Move: left',
+    's': 'Move: down',
+    'd': 'Move: right'
+  };
 
-  if (data === "w") {
-    connection.write("Move: up");
-  }
-
-  if (data === "a") {
-    connection.write("Move: left");
-  }
-
-  if (data === "s") {
-    connection.write("Move: down");
-  }
-
-  if (data === "d") {
-    connection.write("Move: right");
+  if (keyMap[data]) {
+    connection.write(keyMap[data]);
   }
 };
 
