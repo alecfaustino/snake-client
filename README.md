@@ -18,4 +18,4 @@ You can add your initials in the command line as you begin the game to identify 
 ## Getting Started
 
 - Follow steps inside the snek server repo to run the server side
-- Run the development snake client using the `node play.js` command.
+- Run the development snake client using the `node play.js <your initials>` command.
