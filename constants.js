@@ -1,6 +1,6 @@
 const terminalInput = process.argv.slice(2);
 const initials = terminalInput[0];
-const IP = 'localhost'
+const IP = 'localhost';
 const PORT = 50541;
 const keyMap = {
   'w': 'Move: up',
